@@ -1,0 +1,1314 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2vw;
+}
+
+h1 {
+	text-align: center;
+	font-weight: 700;
+	margin-top: 12vw;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	background-color: #D9D9D9;
+	overflow-x: hidden;
+	max-width: 100vw;
+}
+
+.menu {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	width: 94vw;
+	padding: 0 8%;
+	margin: 3vw 0;
+	align-items: center;
+}
+
+.menu_part {
+	display: flex;
+	align-items: flex-start;
+}
+
+.menu_part a {
+	margin: 0 10px;
+}
+
+.menu_part:nth-child(2) a:nth-child(3) {
+	display: inline-block;
+	height: 20vw;
+	width: 2vw;
+	background-image: url("img/man.png");
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: contain;
+}
+
+.logo {
+	display: block;
+	width: 17%;
+	height: 7vw;
+	background-image: url("img/wedding/logo.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-right: 5%;
+}
+
+.menu_links {
+	width: 83%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu_man {
+	width: 4%;
+	height: 7vw;
+	background-image: url("img/man.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.menu_man:hover {
+	cursor: pointer;
+}
+
+.menu_a a {
+	font-size: 1.5vw;
+}
+
+#list_btn {
+	cursor: pointer;
+}
+
+.menu_links .menu_a:nth-child(1) {
+	position: relative;
+}
+
+.list {
+	position: absolute;
+	top: 100%;
+	display:inline-block;
+	flex-direction: column;
+	display: none;
+	text-align: center;
+	margin-left: 45px;
+	line-height: 1.5;
+}
+
+.list a {
+	font-size: 1vw;
+	
+}
+
+.burger_block {
+	width: 30px;
+	display: flex;
+	caret-color: transparent;
+}
+
+.burger_block:hover {
+	cursor: none;
+}
+
+.burger_block:active {
+	cursor: none;
+}
+
+.burger_block div {
+	height: 3px;
+	background-color: #fff;
+	transform: rotate(0);
+	transition: all 0.5s linear;
+}
+
+#bline2 {
+	margin: 5px 0;
+	background-color: #fff;
+}
+
+.burger_menu {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 12vw;
+	right: -33%;
+	transition: right 0.5s ease-in-out;
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 3vw;
+}
+
+.burger_menu a {
+	display: inline-block;
+	margin: 1vw 0;
+	font-size: 2.5vw;
+}
+
+@media screen and (max-width: 800px) {
+	.menu a {
+		display: none;
+	}
+
+	#login-btn {
+		display: inline;
+	}
+
+	.menu_part {
+		align-items: center;
+	}
+
+	.burger_block {
+		display: block;
+	}
+
+	.menu_part:nth-child(2) a:nth-child(3) {
+		height: 20px;
+		width: 20px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.menu {
+		padding: 0;	
+	}
+}
+
+.main {
+	width: 100%;
+	height: 70vw;
+	background-image: url("img/logo.png"), url("img/wife.png");
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom 1vw right 1vw, top;
+	background-size: 10vw auto, cover;
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.main_info {
+	width: 100%;
+	height: 75%;
+	padding-left: 4vw;
+}
+
+.main_h {
+	font-size: 3vw;
+	text-transform: uppercase;
+}
+
+.main_about {
+	font-size: 2.1vw;
+}
+
+
+.studio_h {
+	font-size: 4vw;
+	text-align: center;
+	padding: 15px;
+}
+
+.studio_inner {
+	position: relative;
+	margin: auto;
+	width: 90vw;
+}
+
+.studio_text {
+	font-size: 2.5vw;
+	background-color: #DFCFD0;
+	width: 90%;
+	padding: 12vw 3vw;
+	padding-right: 25vw;
+	display: flex;
+	align-items: center;
+}
+
+.studio_img {
+	position: absolute;
+	top: 15%;
+	right: 0;
+	width: 40%;
+	height: 70%;
+	background-image: url("img/studio.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right;
+}
+
+@media screen and (max-width: 800px) {
+	.studio_inner {
+		background-color: #DFCFD0;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: flex-end;
+		padding-top: 3vw;
+	}
+
+	.studio_img {
+		position: static;
+		width: 50vw;
+		height: 78vw;
+		margin: auto;
+		background-image: url("img/studio.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: right;
+	}
+
+	.studio_text {
+		width: 100%;
+		padding: 3vw;
+	}
+}
+
+.footer_menu {
+	padding: 3vw 0;
+	display: flex;
+	justify-content: space-around;	
+}
+
+.footer_menu a {
+	text-align: center;
+	display: block;
+	width: 16vw;
+	border-right: 2px solid #DFCFD0;
+}
+
+.footer_menu a:nth-child(5) {
+	border: none;
+}
+
+.footer_tel {
+	display: flex;
+	justify-content: space-around;
+}
+
+.footer_part {
+	text-align: center	;
+}
+
+.media {
+	display: flex;
+	justify-content: center;
+	padding: 3vw 0;
+}
+
+.media a {
+	display: inline-block;
+	width: 4vw;
+	height: 4vw;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 0 4vw;
+}
+
+.mail {
+	background-image: url("img/mail.png");
+}
+
+.vk {
+	background-image: url("img/wedding/vk.png");
+}
+
+.inst {
+	background-image: url("img/wedding/inst.png");
+}
+
+.tg {
+	background-image: url("img/wedding/tg.png");
+}
+
+.footer {
+	text-align: center;
+	padding: 3vw 0;
+	text-transform: uppercase;
+	font-size: 2.5vw;
+}
+
+.catalog {
+	margin-top: 4vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.catalog_item {
+	width: 28vw;
+	margin: 3vw 0;
+}
+
+.catalog_img {
+	width: 100%;
+	height: 48vw;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.catalog_img_1{
+	width: 100%;
+	height: 25vw;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+/* .catalog_catalog_ac{
+	width: 100%;
+	height: 25vw;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+} */
+
+.catalog_img:hover {
+	cursor: pointer;
+}
+
+.catalog .catalog_item:nth-child(1) .catalog_img {
+	background-image: url("img/wedding/img/dresses/1.jpg");
+	
+}
+
+.catalog .catalog_item:nth-child(2) .catalog_img {
+	background-image: url("img/wedding/img/dresses/2.jpg");
+}
+
+.catalog .catalog_item:nth-child(3) .catalog_img {
+	background-image: url("img/wedding/img/dresses/3.jpg");
+}
+
+.catalog .catalog_item:nth-child(4) .catalog_img {
+	background-image: url("img/wedding/img/dresses/4.jpg");
+}
+
+.catalog .catalog_item:nth-child(5) .catalog_img {
+	background-image: url("img/wedding/img/dresses/5.jpg");
+}
+
+.catalog .catalog_item:nth-child(6) .catalog_img {
+	background-image: url("img/wedding/img/dresses/6.jpg");
+}
+
+.catalog .catalog_item:nth-child(7) .catalog_img {
+	background-image: url("img/wedding/img/dresses/7.jpg");
+}
+
+.catalog .catalog_item:nth-child(8) .catalog_img {
+	background-image: url("img/wedding/img/dresses/8.jpg");
+}
+
+.catalog .catalog_item:nth-child(9) .catalog_img {
+	background-image: url("img/wedding/img/dresses/9.jpg");
+}
+
+
+.catalog_man .catalog_item:nth-child(1) .catalog_img {
+	background-image: url("img/wedding/img/costumes/1.jpg");
+}
+
+.catalog_man .catalog_item:nth-child(2) .catalog_img {
+	background-image: url("img/wedding/img/costumes/2.jpg");
+}
+
+.catalog_man .catalog_item:nth-child(3) .catalog_img {
+	background-image: url("img/wedding/img/costumes/3.jpg");
+}
+
+.catalog_man .catalog_item:nth-child(4) .catalog_img {
+	background-image: url("img/wedding/img/costumes/4.jpg");
+}
+
+.catalog_man .catalog_item:nth-child(5) .catalog_img {
+	background-image: url("img/wedding/img/costumes/5.jpg");
+}
+
+.catalog_man .catalog_item:nth-child(6) .catalog_img {
+	background-image: url("img/wedding/img/costumes/6.jpg");
+}
+
+.catalog_man .catalog_item:nth-child(7) .catalog_img {
+	background-image: url("img/wedding/img/costumes/7.jpg");
+}
+
+.catalog_man .catalog_item:nth-child(8) .catalog_img {
+	background-image: url("img/wedding/img/costumes/8.jpg");
+}
+
+.catalog_man .catalog_item:nth-child(9) .catalog_img {
+	background-image: url("img/wedding/img/costumes/9.jpg");
+}
+
+
+.catalog_ac .catalog_item:nth-child(1) .catalog_img_1 {
+	background-image: url("img/wedding/img/accessories/1.jpg");
+}
+
+.catalog_ac .catalog_item:nth-child(2) .catalog_img_1 {
+	background-image: url("img/wedding/img/accessories/5.jpg");
+}
+
+.catalog_ac .catalog_item:nth-child(3) .catalog_img_1 {
+	background-image: url("img/wedding/img/accessories/7.jpg");
+}
+
+.catalog_ac .catalog_item:nth-child(4) .catalog_img_1 {
+	background-image: url("img/wedding/img/ободки/6\ ободок.jpg");
+}
+
+.catalog_ac .catalog_item:nth-child(5) .catalog_img_1 {
+	background-image: url("img/wedding/img/ободки/2\ ободок.jpg");
+}
+
+.catalog_ac .catalog_item:nth-child(6) .catalog_img_1 {
+	background-image: url("img/wedding/img/ободки/5\ ободок.jpg");
+}
+
+.catalog_ac .catalog_item:nth-child(7) .catalog_img_1 {
+	background-image: url("img/wedding/img/ободки/3\ ободок.jpg");
+}
+
+.catalog_ac .catalog_item:nth-child(8) .catalog_img_1 {
+	background-image: url("img/wedding/img/accessories/9.jpg");
+}
+
+.catalog_ac .catalog_item:nth-child(9) .catalog_img_1 {
+	background-image: url("img/wedding/img/accessories/8.jpg");
+}
+
+.catalog_name {
+	text-align: center;
+	margin: 2vw 0;
+}
+
+.catalog_price {
+	text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+	.catalog_item {
+		width: 43vw;
+	}
+
+	.catalog_img {
+		height: 75vw;
+	}
+
+	.catalog_name, .catalog_price {
+		font-size: 3vw;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.catalog_item {
+		width: 90vw;
+	}
+
+	.catalog_img {
+		height: 140vw;
+	}
+
+	.catalog_name, .catalog_price {
+		font-size: 4vw;
+	}
+}
+
+.online {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.online_text {
+	width: 45vw;
+	padding: 15px;
+	margin-right: 1vw;
+}
+
+.online_h {
+	font-weight: 500;
+	font-size: 3vw;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.online_about {
+	font-size: 2vw;
+	text-align: center;
+}
+
+.online_img {
+	width: 45vw;
+	height: 30vw;
+	background-image: url("img/online.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.online_form {
+	text-align: center;
+	background-color: #EEDFD8;
+	padding: 15vw 0;
+	margin-top: 5vw;
+}
+
+@media screen and (max-width: 800px) {
+	.online {
+		flex-direction: column;
+	}
+
+	.online_text {
+		width: 90vw;
+	}
+
+	.online_img {
+		width: 90vw;
+		height: 60vw;
+	}
+}
+
+#name, #tel {
+	border: none;
+	margin: 2vw;
+	border-radius: 10px;
+	font-size: 2.3vw;
+	padding: 10px;
+}
+
+#submit {
+	border-radius: 20px;
+	border: none;
+	font-size: 2.3vw;
+	padding: 10px 30px;
+	background-color: #E4CCC8;
+	margin: 25px;
+}
+
+.services {
+	margin-top: 13vw;
+}
+
+.services_item {
+	display: flex;
+	justify-content: space-between;
+	padding: 2vw 7vw;
+	background-color: #fff;
+	color: #000;
+}
+
+
+.services_item:nth-child(2n-1) {
+	background-color: #000;
+	color: #fff;
+}
+
+
+.contacts_item {
+	padding-left: 5vw;
+	margin: 2vw;
+	font-size: 1vw;
+}
+
+.login_wrapper {
+	z-index: 100;
+	position: fixed;
+	padding: auto;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.login {
+	display: flex;
+	margin: auto;
+	width: 90%;
+	background: #D9D9D9;
+	position: relative;
+}
+
+.auto {
+	padding: 4vw;
+	width: 50%;
+	border-right: 1px solid #E4CCC8;
+}
+
+.auto_h {
+	color: #655754;
+	font-weight: 600;
+	margin-bottom: 4vw;
+}
+
+.auto_login {
+	margin: 4vw 0;
+}
+
+.auto_login input, .login_password input {
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+	border: none;
+	border-radius: 20px;
+	padding: 7px;
+}
+
+.login_password {
+	margin: 4vw 0;
+}
+
+.auto_forget a {
+	background-color: #fff;
+	border: none;
+	border-radius: 20px;
+	padding: 7px;
+	width: 40%;
+	color: #000;
+	display: block;
+	margin: auto;
+}
+
+.auto_forget a:hover {
+	cursor: pointer;
+}
+
+
+.input {
+	background-color: #fff;
+	border: none;
+}
+
+.first {
+	position: relative;
+	text-align: center;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.first_text {
+	top: 4vw;
+	position: absolute;
+	border: none;
+	color: #655754;
+	font-weight: 600;
+}
+
+.first button {
+	color: #000;
+	background-color: #fff;
+	border: none;
+	border-radius: 20px;
+	padding: 10px 5vw;
+}
+
+.first button:hover {
+	cursor: pointer;
+}
+
+.reg {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	margin: 5vw auto;
+	background-color: #D9D9D9;
+	padding: 0 5vw;
+	height: 100vh;
+}
+
+.reg_h {
+	color: #655754;
+	font-weight: 600;
+	text-align: center;
+}
+
+.reg_item {
+	margin: 1vw;
+}
+
+.reg_item input {
+	color: #fff;
+	background-color: #000;
+	border: none;
+	border-radius: 20px;
+	padding: 10px 2vw;
+}
+
+.reg_submit {
+	text-align: center;
+	margin-top: 1vw;
+}
+
+.reg_submit a:hover {
+	cursor: pointer;
+}
+
+.reg_submit a {
+	color: #000;
+	background-color: #fff;
+	border: none;
+	border-radius: 20px;
+	padding: 10px 2vw;
+	border: 2ps solid #000;
+	border-radius: 2vw;
+	margin-top: 1vw;
+}
+
+@media screen and (max-width: 600px) {
+	.reg {
+		height: auto;
+		padding: 10vw;
+	}
+
+	.reg_item input {
+		border-radius: 10px;
+		padding: 5px 1vw;
+		margin: 5px;
+	}
+}
+
+.container {
+	max-width: 1600px;
+	margin: 40px auto;
+	background: #281264;
+	padding: 40px;
+}
+
+.button {
+	background: none;
+	border: 1px solid black;
+	border-radius: 4 px;
+	padding: 10px 20px;
+	font-size: .9rem;
+}
+.button:hover {
+	background: rgb(136, 34, 34);
+}
+.button:active {
+	background: rgb(27, 2, 2);
+	color: #5f1515;
+}
+
+.conteyner {
+	position: relative;
+	width: 100vw;
+	padding-left: 10vw;
+	display: none;
+	justify-content: flex-start;
+	align-items: stretch;
+	margin-top: 12vw;
+	margin-bottom: 5vw;
+}
+
+.slider {
+	width: 27vw;
+	height: 45vw;
+	border: 2px solid black;
+	overflow: hidden;
+}
+
+.slider-btns {
+	position: absolute;
+	width: 27vw;
+	top: 45%;
+	left: 10vw;
+	display: flex;
+	justify-content: space-between;
+}
+
+.slider-prev, .slider-next {
+	font-size: 3vw;
+	background-color: rgba(217, 217, 217, 0.5);
+	font-weight: 700;
+}
+
+.slider-prev:hover, .slider-next:hover {
+	cursor: pointer;
+}
+
+.slider-line {
+	height: 45vw;
+	width: 81vw;
+	display: flex;
+	position: relative;
+	background: #5f1515;
+	left: 0;
+	transition: all ease 1s;
+}
+
+.slider-line img {
+	width: 27vw;
+}
+
+.right_pics {
+	margin-left: 2vw;
+	width: 15vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 45vw;
+}
+
+.pic {
+	width: 100%;
+	height: 21.5vw;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#pic1 {
+	background-image: url("img/wedding/img/dresses/1.1.jpg");
+}
+
+#pic2 {
+	background-image: url("img/wedding/img/dresses/1.1.1.jpg");
+}
+
+.slider_text {
+	margin-left: 2vw;
+}
+
+.slider_text button {
+	background-color: transparent;
+	font-size: 1vw !important;
+	border: none;
+}
+
+.slider_text button:hover {
+	cursor: pointer;
+}
+
+.dress_h {
+	margin: 2vw 0;
+}
+
+.dress_info {
+	margin-bottom: 2vw;
+}
+
+.dress_info div {
+	font-size: 1.3vw;
+}
+
+.info_h {
+	font-weight: 700;
+}
+.info_text {
+	width: 35vw;
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 30%;
+ }
+  
+.close {
+	z-index: 10000;
+	color: #aaaaaa;
+	position: absolute;
+	font-size: 5vw;
+	font-weight: bold;
+	top: -0.5vw;
+	right: 1vw;
+ }
+  
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+ 
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slider_btns {
+	text-align: center;
+}
+
+.slider_line img {
+	width: 40vw;
+	height: auto;
+}
+
+.saloon_inner {
+	background-image: url("img/wedding/saloon.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 95%;
+	height: 95%;
+}
+
+.saloon_after {
+	background-color: rgba(37, 39, 39, 1);
+	color: #fff;
+	padding: 10vw 5vw;
+	margin-top: -7vw;
+	z-index: 0;
+}
+
+.saloon {
+	width: 68vw;
+	margin: auto;
+	height: 45vw;
+	border: 2px solid #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 9vw;
+	z-index: 10;
+}
+
+.revises_h {
+	text-align: center;
+	font-weight: 700;
+	margin: 3vw 0;
+}
+
+.revises {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 90vw;
+	margin: auto;
+}
+
+.revises_item {
+	background-color: rgba(37, 39, 39, 0.31);
+	padding: 3vw;
+	padding-bottom: 6vw;
+	margin-bottom: 6vw;
+	width: 30%;
+	font-weight: 700;
+	border-radius: 1vw;
+}
+
+.revises div .revises_name {
+	margin-bottom: 1vw;
+	font-size: 1.5vw;
+	font-weight: 700;
+}
+
+.revises div .revises_about {
+	font-size: 1.5vw;
+	font-weight: 700;
+}
+
+.footer {
+	background-color: rgba(37, 39, 39, 1);
+	display: flex;
+	justify-content: space-between;
+	padding: 5vw 10vw;
+	align-items: stretch;
+}
+
+.footer a {
+	color: #fff !important;
+	font-size: 1.2vw;
+	text-transform: none;
+}
+
+.footer div {
+	color: #fff !important;
+	font-size: 1.2vw;
+	text-transform: none;
+}
+
+.footer_logo {
+	background-image: url("img/wedding/footer_logo.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	width: 8vw;
+	margin-top: -3vw;
+}
+
+.footer .footer_item:nth-child(2) {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.footer .footer_item:nth-child(2) .footer_text:nth-child(2) {
+	margin: 1vw 0;
+}
+
+.footer .footer_item:nth-child(3) {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.footer .footer_item:nth-child(3) .footer_text:nth-child(2) {
+	margin: 1vw 0;
+}
+
+.footer .footer_item:nth-child(4) {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	padding: 0 1.5vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.footer .footer_item:nth-child(4) .footer_text {
+	width: 2.5vw;
+	height: 2.5vw;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.footer .footer_item:nth-child(5) {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.footer .footer_item:nth-child(5) .footer_text span {
+	width: 1vw;
+	height: 1vw;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin-right: 2.5vw;
+}
+
+
+.footer .footer_item:nth-child(4) .inst {
+	background-size: 80% auto;
+	margin: 1vw 0;
+}
+
+.footer .footer_item:nth-child(4) .tg {
+	background-size: 80% auto;
+}
+
+.metro {
+	background-image: url("img/wedding/metro.png");
+}
+
+.gps {
+	background-image: url("img/wedding/gps.png");
+}
+
+.tel {
+	background-image: url("img/wedding/tel.png");
+}
+
+.contacts {
+	width: 92vw;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	margin-top: 10vw;
+}
+
+.contacts div div {
+	font-size: 1.2vw;
+}
+
+.contacts_item {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.contacts .contacts_item:nth-child(2) {
+	flex-direction: column-reverse;
+	align-items: center;
+	text-align: center;
+}
+
+.contacts_bold {
+	font-weight: 800;
+}
+
+.contacts_text {
+	margin-bottom: 5vw;
+}
+
+.contacts_img {
+	width: 100%;
+	height: 30vw;
+	background-size: contain;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+.map {
+	background-image: url("img/wedding/map.png");
+}
+
+.contacts_pic {
+	background-image: url("img/wedding/contacts.png");
+}
+
+.account {
+	margin-top: 10vw;
+	padding: 10vw 0;
+	padding-left: 22vw;
+}
+
+.account_inner {
+	width: 35vw;
+	display: flex;
+	justify-content: space-between;
+}
+
+.account_img {
+	width: 40%;
+	height: 17vw;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("img/wedding/person.png");
+}
+
+.account_info {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.account_info div {
+	font-size: 1.5vw;
+}
+
+
+.account_mail {
+	text-decoration: underline;
+}
+
+
+.account_info button {
+	border: 2px solid #000;
+	border-radius: 2vw;
+	padding: 0.7vw 1.5vw;
+	color: #000;
+	background: transparent;
+	text-align: center;
+	font-size: 1.3vw;
+}
+
+.account_info button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.account form {
+	width: 45vw;
+	display: none;
+	justify-content: space-between;
+}
+
+.photo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2vw;
+	border: 2px dotted #000;
+	font-size: 1.2vw !important;
+	width: 40%;
+	background-color: transparent;
+}
+
+.photo:hover {
+	cursor: pointer;
+}
+
+.data {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 50%;
+	align-items: center;
+}
+
+.data_item {
+	display: flex;
+	flex-direction: column;
+}
+
+.data_item span {
+	font-size: 1.3vw;
+	padding-left: 1vw;
+	padding-bottom: 0.5vw;
+}
+
+.data_item input {
+	background-color: transparent;
+	border: 2px solid #000;
+	border-radius: 2vw;
+	padding: 0vw 1vw;
+	margin-bottom: 1.5vw;
+}
+
+.data input[type="submit"] {
+	width: 60%;
+	font-size: 1.3vw;
+	background-color: transparent;
+	border-radius: 2vw;
+	padding: 0.5vw;
+}
+
+.data input[type="submit"]:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+@media screen and (max-width: 500px) {
+	.catalog_item {
+		width: 90%;
+	}
+
+	.catalog_img {
+		height: 100vw;
+	}
+
+
+}
+
+.voiti{
+	background: #fff;
+}
+

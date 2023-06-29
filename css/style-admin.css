@@ -1,0 +1,100 @@
+.content{
+    max-width: 1300px;
+    margin-left: 50px;
+}
+.table {
+    display: table;
+    width: auto;
+    background-color: rgb(255, 240, 244);
+    border-bottom: 1px solid #ff0040;
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title_table{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table_row{
+    max-width: 1300px;
+    margin-left: 50px;
+    display: table-row;
+    width: auto;
+    border-bottom: 1px solid #ff004c;
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table_add_row{
+    display: inline-table;
+    display: table;
+    width: auto;
+    /* background-color: aliceblue; */
+    padding-top: 2%;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+}
+
+button{
+    background-color: #ef7171;
+    border: none;
+    width: 120px;
+    height: 25px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.table_sell6 p{
+    max-width: 170px;
+
+}
+
+.table_sell{
+    display: table-column;
+
+}
+
+.admin_table_cell-text{
+    margin: 50px;
+}
+
+.admin_table_cell_first{
+    margin: 45px;
+    
+}
+
+.admin_projects_table_act{
+    margin: 45px;
+    text-align: right;
+    
+}
+
+.admin_table_row{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand{
+    align-items: center;
+}
+
+.close-img{
+    width: 4px;
+    height: 4px;
+}
+.div-close-img{
+    width: 4px;
+    height: 4px;
+}
+
+.close{
+    width: 4px;
+    height: 4px;
+}
