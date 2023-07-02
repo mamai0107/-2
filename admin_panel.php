@@ -88,6 +88,56 @@ include "./connect.php";
         </div>
     </div>
 
+    <h2 class="name">список услуг</h2>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+        </tr>
+    
+    <?php
+    $zapros = mysqli_query($connect, query: "SELECT Wedding_salon_services.id_wedding_salon_services, Wedding_salon_services.Services_name FROM Wedding_salon_services;");
+    $zapros = mysqli_fetch_all($zapros);
+    foreach ($zapros as $zapross) {
+    ?>
+        <tr>
+            <td><?= $zapross[0]?></td>
+            <td><?= $zapross[1]?></td>
+        </tr>
+        <?php
+        }
+        ?>
+</table>
+
+<h2 class="name1">Список клиентов в ожидании</h2>
+    <table>
+        <tr>
+            <td>name</td>
+            <td>surname</td>
+            <td>patronymic</td>
+            <td>id_client</td>
+            <td>id_order_status</td>
+        </tr>
+    
+    <?php
+    $zapros1 = mysqli_query($connect, query: "select client.name, client.surname, client.patronymic, Orders_for_wedding_dresses.id_client, Orders_for_wedding_dresses.id_order_status from client, Orders_for_wedding_dresses, Order_status where Orders_for_wedding_dresses.id_client = client.id_client and Orders_for_wedding_dresses.id_order_status = Order_status.id_Order_status and Orders_for_wedding_dresses.id_order_status = 4;");
+    $zapros1 = mysqli_fetch_all($zapros1);
+    foreach ($zapros1 as $zapross1) {
+    ?>
+        <tr>
+            <td><?= $zapross1[0]?></td>
+            <td><?= $zapross1[1]?></td>
+            <td><?= $zapross1[2]?></td>
+            <td><?= $zapross1[3]?></td>
+            <td><?= $zapross1[4]?></td>
+        </tr>
+        <?php
+        }
+        ?>
+</table>
+
+
+
     <?php
     if (isset($_GET['id_admin'])) {
         $albumsD = $_GET['id_admin'];
